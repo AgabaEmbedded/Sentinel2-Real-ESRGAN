@@ -56,7 +56,11 @@ def main():
 
     # determine models according to model names
     args.model_name = args.model_name.split('.')[0]
-    if args.model_name == 'RealESRGAN_x4plus':  # x4 RRDBNet model
+    if args.model_name == 'ESRGAN_20_t0_10m':  # x4 RRDBNet model
+        model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
+        netscale = 4
+        file_url = ['https://github.com/AgabaEmbedded/Large_files/releases/download/v0.1.0/ESRGAN_20_t0_10m.pth']
+    elif args.model_name == 'RealESRGAN_x4plus':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth']
