@@ -59,7 +59,7 @@ def main():
     if args.model_name == 'ESRGAN_20_t0_10m':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
-        file_url = ['https://github.com/AgabaEmbedded/Large_files/releases/download/v2.0/20m.to.10m.release2.pth']
+        file_url = ['https://github.com/AgabaEmbedded/Large_files/releases/download/v3.0/net_g_latest.pth']
     elif args.model_name == 'RealESRGAN_x4plus':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
