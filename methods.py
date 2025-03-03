@@ -1,3 +1,9 @@
+import os
+import glob
+import shutil
+import rasterio
+import numpy as np
+from PIL import Image
 def update_metadata(metadata, scale_factor, original_transform, original_res, height):
       
   new_transform = original_transform * original_transform.scale(1/scale_factor, 1/scale_factor)
